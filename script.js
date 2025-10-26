@@ -56,7 +56,7 @@ function saveSettings(){
 function loadSettings(){
   const saved = localStorage.getItem("converterSettings");
   if(!saved) return;
-  const settings = JSON.parse(saved);{
+  const settings = JSON.parse(saved);
 }
 
  amountInput.value = settings.amount || 0;
