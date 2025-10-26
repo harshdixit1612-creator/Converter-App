@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="circle circle-primary"></div>
+    <div class="circle circle-accent"></div>
+    <div class="circle circle-secondary"></div>
+
+    <!-- Main Card -->
+    <div class="card">
+      <div class="card-content">
+        <div class="title-section">
+          <h1>Ultimate Converter</h1>
+          <p>Convert with style and precision</p>
+        </div>
+
+        <div class="button-group">
+          <button id="currencyBtn" class="active">Currency Mode</button>
+          <button id="tempBtn">Temperature Mode</button>
+        </div>
+
+        <!-- Currency Section -->
+        <div id="currencySection" class="converter-section">
+          <div class="card-section border-primary">
+            <label class="label-primary">From</label>
+            <select id="fromCurrency" class="select-box">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CHF">CHF - Swiss Franc</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+              <option value="MXN">MXN - Mexican Peso</option>
+            </select>
+            <input
+              type="number"
+              id="amount"
+              class="amount-input"
+              placeholder="0.00"
+            />
+          </div>
+
+          <div class="icons">
+            <div class="arrow">&#8595;</div>
+          </div>
+        <!--TO-->
+          <div class="card-section border-secondary">
+            <label class="label-secondary">To</label>
+            <select id="toCurrency" class="select-box">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CHF">CHF - Swiss Franc</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+              <option value="MXN">MXN - Mexican Peso</option>
+            </select>
+
+            <div id="result" class="result-box">92.00</div>
+          </div>
+          <!--reset button-->
+         <div class="button-group">
+          <button id="resetbtn" class="active">Reset</button>
+        </div>
+        </div>
+        
+
+        <!-- Temperature Section -->
+        <div id="tempSection" class="converter-section hidden">
+          <div class="card-section border-primary">
+            <label class="label-primary">From</label>
+            <select id="fromTemp" class="select-box">
+              <option value="C">Celsius (°C)</option>
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+            <input
+              type="number"
+              id="tempInput"
+              value="0"
+              class="amount-input"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="icons">
+            <div class="arrow">&#8595;</div>
+            <div class="trend">&#8679;</div>
+          </div>
+
+          <div class="card-section border-secondary">
+            <label class="label-secondary">To</label>
+            <select id="toTemp" class="select-box">
+              <option value="C">Celsius (°C)</option>
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="K">Kelvin (K)</option>
+            </select>
+
+            <div id="tempResult" class="result-box">0.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
